@@ -1,46 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 19:11:50 by cyacoub-          #+#    #+#             */
-/*   Updated: 2022/09/14 16:37:23 by cyacoub-         ###   ########.fr       */
+/*   Created: 2022/09/14 16:41:56 by cyacoub-          #+#    #+#             */
+/*   Updated: 2022/09/14 17:32:48 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 //#include <stdio.h>
+#include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_isalpha(int c)
 {
-	int	i;
-	int	sign;
-	int	nb;
-
-	i = 0;
-	sign = 1;
-	nb = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
-		i++;
-	while (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-		{
-			sign *= -1;
-		}
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		nb = (str[i] - '0') + (nb * 10);
-		i++;
-	}
-	return (nb * sign);
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+		return (1);
+	else
+		return (0);
 }
 /*int	main()
 {
-	char	*s = " ---+--+1234ab567";
-	printf("%d\n", ft_atoi(s));
+	int	c = '1';
+	printf("%d", ft_isalpha(c));
 }*/
