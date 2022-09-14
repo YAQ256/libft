@@ -13,8 +13,10 @@ SRC = ft_atoi.c\
 
 OBJS_NAME = $(SRC:.c=.o)
 
-programa: $(OBJS_NAME)
-	$(CC) $(CFLAGS) $(OBJS_NAME) -o $(NAME)
-
+programa: $(SRC)
+	$(CC) $(CFLAGS) $(SRC) -c
+	ar -crs $(NAME) $(OBJS_NAME)
 clean:
-	$(RM) $(OBJS_NAME)
+	$(RM) $(OBJS_NAME) 
+fclean: clean
+	$(RM) $(NAME)
