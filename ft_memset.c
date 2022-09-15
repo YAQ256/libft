@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 19:01:23 by cyacoub-          #+#    #+#             */
-/*   Updated: 2022/09/15 16:29:49 by cyacoub-         ###   ########.fr       */
+/*   Created: 2022/09/15 16:30:46 by cyacoub-          #+#    #+#             */
+/*   Updated: 2022/09/15 17:06:46 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <unistd.h>
-# include <stddef.h>
+#include "libft.h"
+//#include <stdio.h>
 
-int		ft_atoi(char *str);
-size_t	ft_strlen(char *str);
-int		ft_strncmp(char *str1, char *str2, unsigned int n);
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
+void	*ft_memset(void *b, int c, size_t n)
+{
+	size_t			i;
+	unsigned char	*str;
 
-#endif
+	i = 0;
+	str = b;
+	while (i < n)
+	{
+		str[i] = (unsigned char) c;
+		i++;
+	}
+	return (b);
+}
+/*int	main()
+{
+	int	n = 5;
+	char	str[] = "42 madrid es una secta en la que te gustará entrar";
+	ft_memset(str + 5, '.', n*sizeof(char));
+	printf ("%s", str);
+}*/

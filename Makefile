@@ -5,11 +5,13 @@ CFLAGS = -Werror -Wall -Wextra
 RM = rm -rf
 
 SRC = ft_atoi.c\
-			ft_strlen.c\
 			ft_strncmp.c\
 			ft_isalpha.c\
 			ft_isdigit.c\
-			ft_isalnum.c
+			ft_isalnum.c\
+			ft_isascii.c\
+			ft_isprint.c\
+			ft_strlen.c∫
 
 OBJS_NAME = $(SRC:.c=.o)
 
@@ -22,8 +24,4 @@ clean:
 	$(RM) $(OBJS_NAME) 
 fclean: clean
 	$(RM) $(NAME)
-re: fclean
-	$(RM) $(NAME)
-	$(CC) $(CFLAGS) $(SRC) -c
-	ar -crs $(NAME) $(OBJS_NAME)
-
+re: all fclean
