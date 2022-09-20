@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 18:55:02 by cyacoub-          #+#    #+#             */
-/*   Updated: 2022/09/20 16:10:49 by cyacoub-         ###   ########.fr       */
+/*   Created: 2022/09/20 16:03:14 by cyacoub-          #+#    #+#             */
+/*   Updated: 2022/09/20 16:23:02 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
 
-size_t	ft_strlen(const char *str)
+void	ft_putchar_fd(char c, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+	write(fd, &c, 1);
 }
-/*int main(void)
-{
-	char    str[] = "Hola mundo";
-	printf("la longitud es = %ld\n", ft_strlen(str));
-}*/
