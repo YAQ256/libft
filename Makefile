@@ -24,7 +24,9 @@ SRC = ft_atoi.c\
 			ft_strrchr.c\
 			ft_memchr.c\
 			ft_memcmp.c\
-			
+			ft_strnstr.c\
+			ft_calloc.c\
+			ft_strdup.c
 
 OBJS = $(SRC:.c=.o)
 
@@ -33,10 +35,13 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(SRC) -c
 	ar crs $(NAME) $(OBJS)
+
 clean:
-	$(RM) $(OBJS) 
+	$(RM) $(OBJS)
+
 fclean: clean
 	$(RM) $(NAME)
-re: all clean
+
+re: clean all
 
 .PHONY: all re clean fclean

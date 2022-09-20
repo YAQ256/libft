@@ -1,26 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 12:24:46 by cyacoub-          #+#    #+#             */
-/*   Updated: 2022/09/19 14:54:26 by cyacoub-         ###   ########.fr       */
+/*   Created: 2022/09/19 18:22:18 by cyacoub-          #+#    #+#             */
+/*   Updated: 2022/09/19 18:36:32 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	*ft_calloc(size_t count, size_t size)
 {
-	while (*s)
+	unsigned char	*ptr;
+
+	ptr = malloc (size * count);
+	if (ptr == 0)
+		return (0);
+	ft_bzero(ptr, size * count);
+	return (ptr);
+}
+/*
+#include <stdlib.h>
+#include <unistd.h>
+
+int		main(int argc, const char *argv[])
+{
+	char	*str;
+
+	alarm(5);
+	if (argc == 1)
+		return (0);
+	else if (atoi(argv[1]) == 1)
 	{
-		if (*s == (char)c)
-			return ((char *) s);
-		s++;
+		str = (char *)ft_calloc(30, 1);
+		if (!str)
+			write(1, "NULL", 4);
+		else
+			write(1, str, 30);
 	}
-	if (c == '\0')
-		return ((char *) s);
 	return (0);
 }
+*/
