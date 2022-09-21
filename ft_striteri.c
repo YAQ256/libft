@@ -1,39 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 12:27:01 by cyacoub-          #+#    #+#             */
-/*   Updated: 2022/09/21 17:09:28 by cyacoub-         ###   ########.fr       */
+/*   Created: 2022/09/21 16:57:13 by cyacoub-          #+#    #+#             */
+/*   Updated: 2022/09/21 16:58:50 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char))
 {
-	int	len;
+	unsigned int	i;
+	char			*tmp;
 
-	len = ft_strlen((char *)s);
-	if (c == 0)
-		return ((char *) &s[len]);
-	while (len + 1 > 0)
+	i = 0;
+	tmp = malloc(ft_strlen(s) + 1);
+	if (tmp == 0)
+		return (0);
+	if (s == 0 || f == 0)
+		return (0);
+	while (s[i])
 	{
-		if (s[len] == (char) c)
-			return ((char *) &s[len]);
-		len--;
+		tmp[i] = f(i, s[i]);
+		i++;
 	}
-	return (0);
-}
-
-int	main()
-{
-	char	*str = "tripouille";
-
-	printf("1: %s\n", ft_strrchr(str, 't' + 256));
-	printf("2: %s\n", strrchr(str, 't' + 256));
-	return (0);
+	tmp[i] = '\0';
+	return (tmp);
 }
