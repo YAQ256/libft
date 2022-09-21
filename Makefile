@@ -40,7 +40,6 @@ OBJS = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(SRC) -c
 	ar crs $(NAME) $(OBJS)
 
 clean:
