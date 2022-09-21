@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 12:27:01 by cyacoub-          #+#    #+#             */
-/*   Updated: 2022/09/21 17:09:28 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2022/09/21 17:30:03 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,5 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *) &s[len]);
 		len--;
 	}
-	return (0);
-}
-
-int	main()
-{
-	char	*str = "tripouille";
-
-	printf("1: %s\n", ft_strrchr(str, 't' + 256));
-	printf("2: %s\n", strrchr(str, 't' + 256));
 	return (0);
 }
