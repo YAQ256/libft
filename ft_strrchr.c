@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 12:27:01 by cyacoub-          #+#    #+#             */
-/*   Updated: 2022/09/21 17:30:03 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2022/09/27 15:38:23 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strrchr(const char *s, int c)
 	int	len;
 
 	len = ft_strlen((char *)s);
-	if (c == 0)
+	if ((char)c == 0)
 		return ((char *) &s[len]);
 	while (len + 1 > 0)
 	{

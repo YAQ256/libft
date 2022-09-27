@@ -6,14 +6,14 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 19:11:50 by cyacoub-          #+#    #+#             */
-/*   Updated: 2022/09/19 16:08:45 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2022/09/27 15:15:53 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 //#include <stdio.h>
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	sign;

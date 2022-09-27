@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 16:26:34 by cyacoub-          #+#    #+#             */
-/*   Updated: 2022/09/16 17:34:37 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2022/09/27 15:41:27 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
+	if (src == 0 && dest == 0)
+		return (NULL);
 	while (i < n)
 	{
 		((char *)dest)[i] = ((char *)src)[i];

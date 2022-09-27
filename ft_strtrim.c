@@ -6,11 +6,12 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:55:55 by cyacoub-          #+#    #+#             */
-/*   Updated: 2022/09/21 16:56:00 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2022/09/27 16:18:57 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	isinset(char const *set, char c)
 {
@@ -38,7 +39,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 				break ;
 		}
 		len = ft_strlen(s1);
-		while (*(s1 + len - 1) && (len >= 0))
+		while ((len > 0) && *(s1 + len - 1))
 		{
 			if (isinset(set, *(s1 + len - 1)))
 				len--;

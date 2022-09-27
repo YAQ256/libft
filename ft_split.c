@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/27 13:31:17 by cyacoub-          #+#    #+#             */
+/*   Updated: 2022/09/27 13:36:07 by cyacoub-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	get_nwords(char const *s, char c)
@@ -48,13 +60,13 @@ char	**ft_split(char const *s, char c)
 	int		nwords;
 	char	**ptr;
 	char	*str;
-	char	d[2];
+	char	a[2];
 
-	d[0] = c;
-	d[1] = '\0';
+	a[0] = c;
+	a[1] = '\0';
 	if (s)
 	{
-		str = ft_strtrim(s, d);
+		str = ft_strtrim(s, a);
 		if (str)
 		{
 			nwords = get_nwords(str, c);
