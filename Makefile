@@ -41,6 +41,10 @@ SRC = ft_atoi.c\
 
 OBJS = $(SRC:.c=.o)
 
+BONUS = ft_lstnew.c\
+
+OBJS_BONUS = $(BONUS:.c=.o)
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
@@ -53,5 +57,8 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: clean all
+
+bonus: $(OBJS) $(OBJS_BONUS)
+		ar crs $(NAME) $(OBJS) $(OBJS_BONUS)
 
 .PHONY: all re clean fclean
