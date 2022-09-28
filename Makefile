@@ -42,6 +42,8 @@ SRC = ft_atoi.c\
 OBJS = $(SRC:.c=.o)
 
 BONUS = ft_lstnew.c\
+		ft_lstadd_front.c\
+		ft_lstsize.c\
 
 OBJS_BONUS = $(BONUS:.c=.o)
 
