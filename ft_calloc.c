@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 18:22:18 by cyacoub-          #+#    #+#             */
-/*   Updated: 2022/09/19 18:36:32 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:56:01 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char	*ptr;
+	void	*ptr;
 
+	if (count >= SIZE_MAX)
+		return (NULL);
 	ptr = malloc (size * count);
-	if (ptr == 0)
-		return (0);
+	if (!ptr)
+		return (NULL);
 	ft_bzero(ptr, size * count);
 	return (ptr);
 }
