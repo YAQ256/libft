@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 13:31:17 by cyacoub-          #+#    #+#             */
-/*   Updated: 2022/09/27 13:36:07 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:52:31 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,20 @@ static int	get_nwords(char const *s, char c)
 	return (nwords);
 }
 
+static void	*freemmory(char **memry, size_t aux)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < aux)
+	{
+		free(memry[i]);
+		i++;
+	}
+	free(memry);
+	return (NULL);
+}
+
 static void	save_words(char **ptr, char *str, char c, int nwords)
 {
 	int		i;
@@ -46,6 +60,11 @@ static void	save_words(char **ptr, char *str, char c, int nwords)
 		{
 			aux = ft_strchr(str, c);
 			ptr[i++] = ft_substr(str, 0, aux - str);
+			if (ptr == 0)
+			{
+				freemmory(ptr, i);
+				return ;
+			}
 			while (*aux == c)
 				aux++;
 			str = aux;

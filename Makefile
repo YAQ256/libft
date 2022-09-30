@@ -59,14 +59,16 @@ $(NAME): $(OBJS)
 	ar crs $(NAME) $(OBJS)
 
 clean:
-	$(RM) $(OBJS)
+	@$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
-	$(RM) $(NAME)
+	@rm -f $(NAME)
 
-re: clean all
+re: fclean all
 
 bonus: $(OBJS) $(OBJS_BONUS)
-		ar crs $(NAME) $(OBJS) $(OBJS_BONUS)
+	ar crs $(NAME) $(OBJS) $(OBJS_BONUS)
 
-.PHONY: all re clean fclean
+re: fclean bonus
+
+.PHONY: all re clean fclean bonus
