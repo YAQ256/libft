@@ -66,8 +66,8 @@ fclean: clean
 
 re: fclean all
 
-bonus: $(OBJS) $(OBJS_BONUS)
-	@ar crs $(NAME) $(OBJS) $(OBJS_BONUS)
+bonus:
+	@make SRC='$(SRC) $(BONUS)'
 
 re: fclean bonus
 
