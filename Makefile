@@ -56,7 +56,7 @@ OBJS_BONUS = $(BONUS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar crs $(NAME) $(OBJS)
+	@ar crs $(NAME) $(OBJS)
 
 clean:
 	@$(RM) $(OBJS) $(OBJS_BONUS)
@@ -67,7 +67,7 @@ fclean: clean
 re: fclean all
 
 bonus: $(OBJS) $(OBJS_BONUS)
-	ar crs $(NAME) $(OBJS) $(OBJS_BONUS)
+	@ar crs $(NAME) $(OBJS) $(OBJS_BONUS)
 
 re: fclean bonus
 
