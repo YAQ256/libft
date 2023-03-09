@@ -6,12 +6,11 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 12:27:01 by cyacoub-          #+#    #+#             */
-/*   Updated: 2022/09/27 15:38:23 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/03/09 17:05:44 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strrchr(const char *s, int c)
 {

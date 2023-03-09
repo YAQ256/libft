@@ -6,12 +6,11 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:55:55 by cyacoub-          #+#    #+#             */
-/*   Updated: 2022/09/27 16:18:57 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/03/09 17:05:48 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	isinset(char const *set, char c)
 {

@@ -6,7 +6,7 @@
 /*   By: cyacoub- <cyacoub-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 17:33:57 by cyacoub-          #+#    #+#             */
-/*   Updated: 2022/09/14 17:40:46 by cyacoub-         ###   ########.fr       */
+/*   Updated: 2023/03/09 17:03:03 by cyacoub-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,3 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-/*int	main()
-{
-	int	c = ',';
-	printf("%d", ft_isalnum(c));
-}*/
